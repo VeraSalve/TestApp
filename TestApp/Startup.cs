@@ -18,7 +18,7 @@ namespace TestApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           // Configuration.Bind("Project", new Config());
+           
 
             string connectionString = Configuration.GetConnectionString("TestAppContext");
             services.AddDbContext<TestAppContext>(options =>
