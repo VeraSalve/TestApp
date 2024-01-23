@@ -15,5 +15,11 @@ namespace TestApp.Data
         }
 
         public DbSet<TestApp.Models.Worker> Worker { get; set; } = default!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Spodrychniy;Trusted_Connection=True;MultipleActiveResultSets=true");
+
+        }
     }
 }
