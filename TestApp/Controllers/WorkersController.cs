@@ -54,7 +54,7 @@ namespace TestApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,First_Name,Last_name,Surname,Card_UID")] Worker worker)
+        public async Task<IActionResult> Create([Bind("Id,First_Name,Last_name,Surname,Card_UID")] Workers worker)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace TestApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,First_Name,Last_name,Surname,Card_UID")] Worker worker)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,First_Name,Last_name,Surname,Card_UID")] Workers worker)
         {
             if (id != worker.Id)
             {

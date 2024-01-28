@@ -14,7 +14,7 @@ namespace TestApp.Data
         {
         }
 
-        public DbSet<TestApp.Models.Worker> Worker { get; set; } = default!;
+        public DbSet<TestApp.Models.Workers> Worker { get; set; } = default!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

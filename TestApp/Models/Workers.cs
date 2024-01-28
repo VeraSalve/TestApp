@@ -1,6 +1,6 @@
 ﻿namespace TestApp.Models
 {
-    public class Worker
+    public class Workers
     {
         public int Id { get; set; }
         public string? First_Name { get; set; }
