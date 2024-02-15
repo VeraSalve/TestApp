@@ -5,11 +5,12 @@ namespace TestApp.Models
     public class Audit
     {
         public int Id { get; set; }
-        public int Queque_id { get; set; }
-        public int Worker_id { get; set; }
+        public int queque_id { get; set; }
+        public int status_id { get; set; }
+        public int worker_id { get; set; }
         [DataType(DataType.Date)]
-        public DateTime Start_date { get; set; }
+        public DateTime start_time{ get; set; }
         [DataType(DataType.Date)]
-        public DateTime End_date { get; set; }
+        public DateTime end_time{ get; set; }
     }
 }

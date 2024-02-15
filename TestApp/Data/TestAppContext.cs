@@ -12,9 +12,20 @@ namespace TestApp.Data
         public TestAppContext (DbContextOptions<TestAppContext> options)
             : base(options)
         {
+
+            Database.EnsureCreated();
         }
 
         public DbSet<TestApp.Models.Workers> Worker { get; set; } = default!;
+
+        public DbSet<TestApp.Models.Print_queque> Print_Queque { get; set; } = default!;
+
+        public DbSet<TestApp.Models.Status_of_print> Print_Status {  get; set; } = default!;
+
+        public TestAppContext()
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

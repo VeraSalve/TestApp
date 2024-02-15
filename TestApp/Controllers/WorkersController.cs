@@ -19,6 +19,28 @@ namespace TestApp.Controllers
             _context = context;
         }
 
+
+
+        public ActionResult FilteredWorker(string firstname, string lastname)
+        {
+            IQueryable<Workers> worker = _context.Worker;
+
+            if(!String.IsNullOrEmpty(firstname))
+            {
+                worker = worker.Where(p => p.First_Name.Contains(firstname));
+            }
+
+            if(!String.IsNullOrEmpty(lastname))
+            {
+                worker = worker.Where(r => r.Last_name.Contains(lastname));
+            }
+
+
+
+            return View();
+        }
+
+
         // GET: Workers
         public async Task<IActionResult> Index()
         {

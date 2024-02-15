@@ -1,11 +1,37 @@
-﻿@{
+﻿@model TestApp.Models.Print_queque
+
+@{
     ViewData["Title"] = "Компьютер";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Отправка на печать</h1>
+    <h1 class="display-4">Ввод данных сотрудника на его пк</h1>
 
-    <p>
-       
-    </p>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="pq_uid" class="control-label"></label>
+                    <input asp-for="pq_uid" class="form-control" />
+                    <span asp-validation-for="pq_uid" class="text-danger"></span>
+                </div>
+@*                 <div class="form-group">
+                    <label asp-for="pq_time" class="control-label"></label>
+                    <input asp-for="pq_time" class="form-control" />
+                    <span asp-validation-for="pq_time" class="text-danger"></span>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="pq_document" class="control-label"></label>
+                    <input asp-for="pq_document" class="form-control" />
+                    <span asp-validation-for="pq_document" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Отправить на печать" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
 </div>
